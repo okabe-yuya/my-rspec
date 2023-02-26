@@ -14,3 +14,8 @@ My-Rspec
 - [x] not_to
 - [x] eq
 - [x] include_(予約後のため`_`を付与)
+
+## sample test
+```sh
+bash run-spec.sh
+```
