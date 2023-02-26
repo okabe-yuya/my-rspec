@@ -6,14 +6,22 @@ module Lib
     include Result
     include Matcher
 
-    def context(_name, &block) yield end
+    def context(name, &block)
+      puts "**context group: #{name}"
+      yield
+    end
 
     def it(name, &block)
-      res = yield
-      if res
+      result, expect, is_passed = yield
+      if is_passed
+        print "\e[32m"
         puts "passed test: #{name}"
+        print "\e[0m"
       else
-        raise "failed test: #{name}"
+        text = "failed test: #{name}\nexpect: #{expect}\nresult: #{result}"
+        print "\e[31m"
+        puts text
+        print "\e[0m"
       end
     end
 

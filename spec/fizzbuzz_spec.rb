@@ -27,4 +27,9 @@ context 'fizzbuzz' do
     res = fizzbuzz(17)
     expect(res).to eq 'no match'
   end
+
+  it '20: fizzbuzzとなる(failed case)' do
+    res = fizzbuzz(20)
+    expect(res).to eq 'fizzbuzz'
+  end
 end

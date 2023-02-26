@@ -19,3 +19,5 @@ My-Rspec
 ```sh
 bash run-spec.sh
 ```
+
+![Test Image 3](/docs/test-result.png)
